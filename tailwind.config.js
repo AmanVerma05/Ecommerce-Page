@@ -1,0 +1,108 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    fontSize: {
+      xs: "12px",
+      sm: "14px",
+      base: "15px",
+      body1: "18px",
+      body2: "19px",
+      md: "20px",
+      xl: "22px",
+      "2xl": "24px",
+      "3xl": "28px",
+      "4xl": "32px",
+      "5xl": "36px",
+      "6xl": "40px",
+      "7xl": "45px",
+      "8xl": "50px",
+      "9xl": "54px",
+    },
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-roboto)"],
+        mono: ["var(--font-roboto-mono)"],
+      },
+      colors: {
+        primary: {
+          light: "#97080833",
+          dark: "#970808",
+        },
+        secondary: {
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+        },
+        red: {
+          light: "#F73434",
+          dark: "#F83635",
+        },
+        green: {
+          light: "#DFF6DD",
+          dark: "#34c67a",
+        },
+        gray: {
+          light: "#A3A3A3",
+          light1: "#00000066",
+          light2: "#8E8B8B14",
+          dark: "#F3E45D",
+        },
+        whiteLight: {
+          light: "#E3EFF9",
+          dark: "#F4F4F4",
+        },
+        blackcustom: {
+          light: "#00000099",
+          dark: "#5142FC",
+        },
+      },
+      flexGrow: {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11,
+        12: 12,
+      },
+    },
+    screens: {
+      xs:'100%',
+      sm: "640px",
+      tablet: "768px",
+      md: "992px",
+      lg: "1200px",
+      xl: "1500px",
+      xxl: "1700px",
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "18px",
+        sm: "20px",
+        tablet: "30px",
+        md: "40px",
+        lg: "60px",
+        xl: "80px",
+        xxl: "80px",
+      },
+    },
+  },
+  plugins: [],
+};

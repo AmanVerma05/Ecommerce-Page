@@ -1,3 +1,6 @@
+/* src/index.css */
+@import './styles/tailwind.css';
+/* ... other styles or imports ... */
 .App {
   text-align: center;
 }
