@@ -34,7 +34,10 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsOpen(false);
   };
-
+useEffect(()=>{
+    if(isOpen==false)
+    setIsOpenCat(false)
+})
   return (
     <nav className="bg-gray-800 p-4 top-0 sticky z-20">
       <div className="container mx-auto flex items-center gap-40">
@@ -104,19 +107,20 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden absolute top-16 left-0 right-0 bg-gray-800">
             <div className="flex flex-col space-y-4 p-4">
-              <a href="#" className="text-white">
+              <Link to="/" className="text-white hover:bg-cyan-400 px-5 py-1 rounded-lg">
                 Home
-              </a>
+          </Link>
               <div className="relative group">
-                <a
-                  href="#"
-                  className="text-white  group-hover:bg-gray-700 px-4 py-2 rounded-md"
-                  onClick={toggleNavbars}
-                >
-                  Category
-                </a>
+              <Link
+              className="text-white  hover:bg-cyan-400 px-5 py-1 rounded-lg"
+              //   onMouseEnter={toggleNavbars}
+              onClick={toggleNavbars}
+              //   onMouseLeave={closeNavbar}
+            >
+              Category
+            </Link>
                 {isOpenCat && (
-                  <div className="absolute h-[16rem] w-[12rem] left-0 mt-3 space-y-4 bg-gray-800 text-white p-2 rounded-md overflow-auto">
+                  <div className="absolute h-[10rem] w-full left-0 mt-3 space-y-4 bg-gray-800 text-white p-2 rounded-md overflow-auto">
                     {catData.map((categoryData) => {
                       return (
                         <>
@@ -133,9 +137,9 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <a href="#" className="text-white">
+              <Link to="/products" className="text-white hover:bg-cyan-400 px-5 py-1 rounded-lg">
                 Products
-              </a>
+          </Link>
             </div>
           </div>
         )}
