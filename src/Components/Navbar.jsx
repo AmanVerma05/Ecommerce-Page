@@ -34,10 +34,10 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsOpen(false);
   };
-useEffect(()=>{
-    if(isOpen==false)
-    setIsOpenCat(false)
-})
+// useEffect(()=>{
+//     if(isOpen==false)
+//     setIsOpenCat(false)
+// })
   return (
     <nav className="bg-gray-800 p-4 top-0 sticky z-20">
       <div className="container mx-auto flex items-center gap-40">
